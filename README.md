@@ -13,6 +13,13 @@
 1. **Determine the correct drive.** Use the *fdisk* utility to find the correct drive for your micro SD card. Run `fdisk -l` to view all drives, and determine the correct one. It should appear as something similar to */dev/sdb*.
 1. **Flash the image.** Run the following command on the verified download file (replace the filename with the correct filename and the drive with the correct drive): `xzcat kali-linux-2018.3-rpi3-nexmon.img.xz | dd of=/dev/sdb bs=512k`
 1. **Run Kali Linux.** Unmount, eject, and insert the SD card into your Raspberry Pi 3 Model B+. Connect the Raspberry Pi to a 5V DC 1.5A micro USB power supply, and log in with the username *root* and the password *toor*.
+1. **Update the Raspberry Pi.** Run the following commands to obtain the latest software and packages after configuring the network connection:
+```bash
+apt-get update
+apt-get dist-upgrade
+apt-get autoremove
+apt-get autoclean
+```
 
 ## Authors
 * **Ashish D'Souza** - *Sole developer* - [computer-geek64](https://github.com/computer-geek64)
@@ -23,3 +30,4 @@
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
