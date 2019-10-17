@@ -20,6 +20,10 @@ apt-get dist-upgrade
 apt-get autoremove
 apt-get autoclean
 ```
+Script to install raspi-config on Raspberry Pi devices with an Linux OS that's missing it. Like Kali Linux. Must be run as root or with sudo.
+
+sudo sh install.sh
+
 
 ## Authors
 * **Ashish D'Souza** - *Sole developer* - [computer-geek64](https://github.com/computer-geek64)
